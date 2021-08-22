@@ -5,8 +5,8 @@
  
 # Create a temporary file which will be the compilation result of our file. 
 tmp=$(mktemp)
-# Make the compilation.
-csc ${1} -out:${tmp}
+# Make the compilation. You can use Microsoft's csc as well.
+mcs ${1} -out:${tmp}
 # Remove the temporary file one second later.
 # So if the program is not ending correctly,
 # the temporary file is gonna be deleted anyway.
